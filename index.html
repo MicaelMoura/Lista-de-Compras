@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Supermercado</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header{
+            background-color: rgb(49, 77, 104);
+            text-align: center;
+            color: white;
+            padding: 20px 0px;
+            font-size: 25px;
+        }
+
+        .lista-cadastro {
+            display: flex;
+            padding: 20px;
+        }
+
+        .lista-cadastro input[type=text], input[type=number]{
+            flex: 1;
+            height: 30px;
+            padding-left: 10px;
+            margin-right: 5px;
+        }
+
+        .lista-produto-single{
+            padding: 8px 0px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+        }
+
+        .lista-produto-single h3{
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .lista-produto-single span {
+            margin: 0px 18px 0px 0px;
+            background-color: rgb(49, 77, 104);
+            color: white;
+            padding: 4px 7px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+
+        .soma-produto{
+            margin: 20px;
+            background-color: rgb(49, 77, 104);
+            color: white;
+            padding: 10px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .soma-produto button {
+            background-color: rgb(143, 32, 32);
+            border: 0px;
+            padding: 5px 10px;
+            font-size: 15px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .soma-produto button:hover{
+            background-color: rgb(202, 7, 7);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Lista de Supermercado</h2>
+    </header>
+    <div class="lista-cadastro">
+        <input type="text" placeholder="Nome" name="nome_produto">
+        <input type="number" placeholder="Valor" step="0.01" name="valor_produto" min="0.00">
+        <input type="submit" value="Cadastrar">
+    </div>
+    <div class="lista-produtos"></div>
+    <div class="soma-produto">
+        <h1>Total: R$ <span>0,00</span></h1>
+        <button class="limpa" name="limpa">Limpar</button>
+    </div>
+    <script src="script_supermercado.js"></script>
+</body>
+</html>
